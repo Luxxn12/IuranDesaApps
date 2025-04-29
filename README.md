@@ -1,3 +1,5 @@
 # IURAN DESA APPS
 
-<img src="./src/assets/logoLogin.webp" width="200" height="200" />
+<div align="center">
+  <img src="./src/assets/logoLogin.webp" width="300" height="300" />
+</div>
