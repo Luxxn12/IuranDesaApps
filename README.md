@@ -1,3 +1,3 @@
 # IURAN DESA APPS
 
-![Iuran Desa App](./src/assets/logoLogin.webp)
+<img src="./src/assets/logoLogin.webp" width="200" height="200" />
