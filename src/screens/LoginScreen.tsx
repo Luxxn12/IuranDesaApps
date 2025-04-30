@@ -1,5 +1,13 @@
 import React, {useState} from 'react';
-import {View, TextInput, Button, StyleSheet, Alert, Image, ScrollView} from 'react-native';
+import {
+  View,
+  TextInput,
+  Button,
+  StyleSheet,
+  Alert,
+  Image,
+  ScrollView,
+} from 'react-native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {RootStackParamList} from '../navigation/AppNavigator';
 import TextStyle from '../components/TextStyle';
@@ -16,7 +24,7 @@ const LoginScreen: React.FC<LoginScreenProps> = ({navigation}) => {
   const [password, setPassword] = useState<string>('');
 
   const handleLogin = () => {
-    if (username === 'admin' && password === 'admin') {
+    if (username === 'lukman' && password === 'lukman') {
       navigation.replace('Main');
     } else {
       Alert.alert('Invalid Credentials');
@@ -28,7 +36,9 @@ const LoginScreen: React.FC<LoginScreenProps> = ({navigation}) => {
   };
 
   return (
-    <ScrollView contentContainerStyle={styles.scrollContainer}>
+    <ScrollView
+      contentContainerStyle={styles.scrollContainer}
+      keyboardShouldPersistTaps="handled">
       <View style={styles.container}>
         <View style={styles.logo}>
           <Image

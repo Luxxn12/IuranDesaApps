@@ -5,11 +5,21 @@ interface TextStyleProps extends TextProps {
   textInput: React.ReactNode;
   color?: string;
   fontSize?: number;
+  fontWeight?: RNTextStyle['fontWeight'];
 }
 
-export default function TextStyle({textInput, color = '#000000', fontSize = 14, style, ...rest}: TextStyleProps) {
+export default function TextStyle({
+  textInput,
+  color = '#000000',
+  fontSize = 14,
+  fontWeight = 'normal',
+  style,
+  ...rest
+}: TextStyleProps) {
   return (
-    <Text style={[styles.text, {color, fontSize}, style]} {...rest}>
+    <Text
+      style={[styles.text, {color, fontSize, fontWeight}, style]}
+      {...rest}>
       {textInput}
     </Text>
   );
@@ -17,6 +27,6 @@ export default function TextStyle({textInput, color = '#000000', fontSize = 14, 
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 14, // default, kalau nggak diisi
+    fontSize: 14,
   },
 });

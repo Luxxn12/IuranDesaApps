@@ -33,7 +33,7 @@ const TabNavigator = () => {
             backgroundColor: '#FFFFFF',
             borderTopColor: '#F4F4F4',
             height: 100,
-            paddingBottom: 24,
+            paddingBottom: 20,
             shadowColor: '#FFFFFF',
             shadowOffset: {width: 0, height: 0},
             shadowOpacity: 0,
@@ -85,7 +85,7 @@ const TabNavigator = () => {
             <Image
               style={
                 focused
-                  ? {width: 24, height: 24, resizeMode: 'stretch'}
+                  ? {width: 20, height: 20, resizeMode: 'stretch'}
                   : Styles.image
               }
               source={focused ? IconActiveBeranda : IconNonActiveBeranda}
@@ -101,7 +101,7 @@ const TabNavigator = () => {
             <Image
               style={
                 focused
-                  ? {width: 24, height: 24, resizeMode: 'stretch'}
+                  ? {width: 20, height: 20, resizeMode: 'stretch'}
                   : Styles.image
               }
               source={focused ? IconActiveRiwayat : IconNonActiveRiwayat}
@@ -117,7 +117,7 @@ const TabNavigator = () => {
             <Image
               style={
                 focused
-                  ? {width: 24, height: 24, resizeMode: 'stretch'}
+                  ? {width: 20, height: 20, resizeMode: 'stretch'}
                   : Styles.image
               }
               source={focused ? IconActiveNotif : IconNonActiveNotif}
@@ -133,7 +133,7 @@ const TabNavigator = () => {
             <Image
               style={
                 focused
-                  ? {width: 24, height: 24, resizeMode: 'stretch'}
+                  ? {width: 20, height: 20, resizeMode: 'stretch'}
                   : Styles.image
               }
               source={focused ? IconActiveProfile : IconNonActiveProfile}
@@ -146,8 +146,8 @@ const TabNavigator = () => {
 };
 const Styles = StyleSheet.create({
   image: {
-    width: 24,
-    height: 24,
+    width: 20,
+    height: 20,
     resizeMode: 'stretch',
     padding: 'auto',
   },

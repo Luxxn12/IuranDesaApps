@@ -1545,6 +1545,11 @@
     prompts "^2.4.2"
     semver "^7.5.2"
 
+"@react-native-community/progress-view@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@react-native-community/progress-view/-/progress-view-1.5.0.tgz#45b84d7dd6094cdf4b5143ee1b02aa612575ba12"
+  integrity sha512-ZUvByohzwJ45+ROzVwWx39OZC+2V1Fo+gX06NfmmKD1Ha2Fu320pIjXhG1/9amcW00ZDeY36wvSBpZKkobmeCg==
+
 "@react-native/assets-registry@0.79.1":
   version "0.79.1"
   resolved "https://registry.npmjs.org/@react-native/assets-registry/-/assets-registry-0.79.1.tgz"

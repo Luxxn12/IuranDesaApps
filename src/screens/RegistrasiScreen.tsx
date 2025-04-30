@@ -28,7 +28,9 @@ const RegistrasiScreen: React.FC<DaftarScreenProps> = ({navigation}) => {
   };
 
   return (
-    <ScrollView contentContainerStyle={styles.scrollContainer}>
+    <ScrollView
+      contentContainerStyle={styles.scrollContainer}
+      keyboardShouldPersistTaps="handled">
       <View style={styles.container}>
         <View style={styles.logo}>
           <Image

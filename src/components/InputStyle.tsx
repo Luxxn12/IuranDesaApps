@@ -1,5 +1,13 @@
 import React, {useState} from 'react';
-import {TextInput, StyleSheet, Text, View, TextInputProps} from 'react-native';
+import {
+  TextInput,
+  StyleSheet,
+  Text,
+  View,
+  TextInputProps,
+  Image,
+  ImageSourcePropType,
+} from 'react-native';
 
 interface InputStyleProps extends TextInputProps {
   label?: string;
@@ -8,16 +16,18 @@ interface InputStyleProps extends TextInputProps {
   padding?: number;
   isPassword?: boolean;
   required?: boolean;
+  iconSource?: ImageSourcePropType;
 }
 
 export default function InputStyle({
   label,
   borderColor = '#CCCCCC',
   borderRadius = 8,
-  padding = 12,
+  padding = 4,
   isPassword = false,
   required = false,
   style,
+  iconSource,
   onBlur,
   ...rest
 }: InputStyleProps) {
@@ -42,20 +52,27 @@ export default function InputStyle({
           {label} {required && <Text style={{color: 'red'}}>*</Text>}
         </Text>
       )}
-      <TextInput
+      <View
         style={[
-          styles.input,
+          styles.inputWrapper,
           {
-            borderColor: "#BABBBDFF",
+            borderColor: '#BABBBDFF',
             borderRadius,
             padding,
           },
           style,
-        ]}
-        secureTextEntry={isPassword}
-        onBlur={handleBlur}
-        {...rest}
-      />
+        ]}>
+        {iconSource && (
+          <Image source={iconSource} style={styles.icon} resizeMode="contain" />
+        )}
+        <TextInput
+          style={styles.input}
+          secureTextEntry={isPassword}
+          onBlur={handleBlur}
+          placeholderTextColor="#888"
+          {...rest}
+        />
+      </View>
     </View>
   );
 }
@@ -66,10 +83,22 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 8,
   },
-  input: {
+  inputWrapper: {
     borderWidth: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 10,
+  },
+  icon: {
+    width: 20,
+    height: 20,
+    marginRight: 8,
+  },
+  input: {
+    flex: 1,
     fontSize: 14,
     color: '#000000',
+    paddingVertical: 8,
   },
   errorText: {
     fontSize: 12,
